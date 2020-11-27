@@ -6,6 +6,7 @@ public class Response {
 	/** 返回信息内容*/
 	private String rspMsg="操作成功";
 
+	//四个重载构造函数
 	public Response() {
 	}
 	
@@ -23,6 +24,8 @@ public class Response {
 		this.rspCode = rspCode;
 		this.rspMsg = rspMsg;
 	}
+
+	//getter和setter方法
 	public String getRspCode() {
 		return rspCode;
 	}
@@ -36,6 +39,7 @@ public class Response {
 		this.rspMsg = rspMsg;
 	}
 
+	//重写toString
 	@Override
 	public String toString() {
 		return "Response{" +
@@ -44,14 +48,3 @@ public class Response {
 				'}';
 	}
 }
-
-
-/*
-	public Response regist(User user) {
-		try {
-
-			User userNameUser = userRepository.findByName(user.getName());
-			AdminUser admingusername = adminUserRepository.findByName(user.getName());
-			if (null != userNameUser || null != admingusername) {
-				return result(ExceptionMsg.UserNameUsed);
-			}*/
