@@ -3,6 +3,7 @@ package com.example.demo.result;
 public class ResponseData extends Response {
     private Object data;
 
+    //五个重载的构造函数
     public ResponseData(Object data) {
         this.data = data;
     }
@@ -24,15 +25,15 @@ public class ResponseData extends Response {
         super(msg);
         this.data = data;
     }
-
+    //Data的getter和setter方法
     public Object getData() {
         return data;
     }
-
     public void setData(Object data) {
         this.data = data;
     }
 
+    //重写toString方法
     @Override
     public String toString() {
         return "ResponseData{" +

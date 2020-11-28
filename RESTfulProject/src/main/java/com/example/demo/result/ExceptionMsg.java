@@ -1,8 +1,7 @@
-
 package com.example.demo.result;
 //实现响应的枚举类
 public enum ExceptionMsg {
-	SUCCESS("200", "操作成功"),
+	SUCCESS("000", "操作成功"),
 	FAILED("999999","操作失败"),
     ParamError("000001", "参数错误！"),
     FileEmpty("000400","上传文件为空"),

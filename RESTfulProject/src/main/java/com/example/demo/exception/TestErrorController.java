@@ -11,11 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author longzhonghua
- * @createdata 3/18/2019 2:02 PM
- * @description 自定义错误
- */
 @RestController
 /*springboot提供了默认的错误映射地址error
 @RequestMapping("${server.error.path:${error.path:/error}}")
