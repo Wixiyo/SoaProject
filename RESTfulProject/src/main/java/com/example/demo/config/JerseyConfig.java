@@ -1,6 +1,7 @@
 package com.example.demo.config;
 
 import com.example.demo.controller.JerseyController;
+import com.example.demo.controller.LogisticsController;
 import com.example.demo.resources.UserResource;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.spring.scope.RequestContextFilter;
@@ -17,6 +18,7 @@ public class JerseyConfig extends ResourceConfig{
         // 在这里注册相关Controller或者需要的特性支持
         register(JerseyController.class);
         register(UserResource.class);
+        register(LogisticsController.class);
     }
 
 }

@@ -1,44 +1,27 @@
-package com.example.demo.controller;
+package com.example.demo;
 
-import com.example.demo.entity.Article;
-import com.example.demo.entity.Deal;
-import com.example.demo.entity.User;
-import com.example.demo.result.ExceptionMsg;
-import com.example.demo.result.ResponseData;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-@Path("/logistics")
-public class LogisticsController {
-    @GET
-    @Path("/getLogistics/{nu}/{com}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public String getUserXml(@PathParam("nu") String nu,@PathParam("com") String com) {
-        Deal deal=new Deal();
-        deal.setNu(nu);
-        deal.setCom(com);
-        String s = SearchLogistics(com,nu);
-        return s;
-    }
 
-    private String SearchLogistics(String com,String nu){
-        com="zhongtong";
-        nu="75414074668446";
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class ConnectTest {
+    @Test
+    public void main() throws Exception{
+        System.out.println("666");
+        String com="zhongtong";
+        String nu="75414074668446";
         BufferedReader in = null;
         try {
             //获取访问地址URL,注意GET请求若URL中包含中文字符的话,在高版本TOMCAT中会认为是不合法字符,可改为POST方式
@@ -68,12 +51,8 @@ public class LogisticsController {
                 in.close();
             }
             System.out.println("返回结果："+result);
-            return result;
         } catch (Exception e) {
             e.printStackTrace();
-            return "-1";
         }
     }
-
-
 }
