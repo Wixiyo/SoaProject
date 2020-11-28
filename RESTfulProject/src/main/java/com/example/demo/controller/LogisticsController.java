@@ -32,13 +32,15 @@ public class LogisticsController {
         Deal deal=new Deal();
         deal.setNu(nu);
         deal.setCom(com);
-        String s = SearchLogistics(com,nu);
+        String s = SearchLogistics(deal);
         return s;
     }
 
-    private String SearchLogistics(String com,String nu){
-        com="zhongtong";
-        nu="75414074668446";
+    private String SearchLogistics(Deal deal){
+        //String com="zhongtong";
+        //String nu="75414074668446";
+        String com = deal.getCom();
+        String nu = deal.getNu();
         BufferedReader in = null;
         try {
             //获取访问地址URL,注意GET请求若URL中包含中文字符的话,在高版本TOMCAT中会认为是不合法字符,可改为POST方式

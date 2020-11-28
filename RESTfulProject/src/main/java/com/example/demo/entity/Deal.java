@@ -5,7 +5,6 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-
 @Data
 public class Deal {
     private long deal_id;
