@@ -22,20 +22,23 @@ public class LogisticsController {
     RestTemplateBuilder restTemplateBuilder;
 
     @GET
-    @Path("/getLogistics/{nu}/{com}")
+    //@Path("/getLogistics/{nu}/{com}")
+    @Path("/getLogistics")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getUserXml(@PathParam("nu") String nu,@PathParam("com") String com) {
+    public String getUserXml() {
         Deal deal=new Deal();
-        deal.setNu(nu);
-        deal.setCom(com);
+        //deal.setNu(nu);
+        //deal.setCom(com);
         String s = SearchLogistics(deal);
         return s;
     }
     private String SearchLogistics(Deal deal){
         RestTemplate client= restTemplateBuilder.build();
-        ResponseEntity<String> responseEntity = client.getForEntity("http://route.showapi.com/64-34?showapi_appid=451917&com={1}&nu={2}&callBackUrl=xxx&phone=&outCode=&showapi_sign=f8ca729443174ba1b73952f4c45b677c", String.class,deal.getCom(),deal.getNu());
+        String a = "http://route.showapi.com/64-34?showapi_appid=451917&com=zhongtong&nu=75414074668446&callBackUrl=xxx&phone=&outCode=&showapi_sign=f8ca729443174ba1b73952f4c45b677c";
+        ResponseEntity<String> responseEntity = client.getForEntity(a,String.class);
+        //ResponseEntity<String> responseEntity = client.getForEntity("http://route.showapi.com/64-34?showapi_appid=451917&com={1}&nu={2}&callBackUrl=xxx&phone=&outCode=&showapi_sign=f8ca729443174ba1b73952f4c45b677c", String.class,deal.getCom(),deal.getNu());
         return responseEntity.getBody();
-    }
+}
 
 
 

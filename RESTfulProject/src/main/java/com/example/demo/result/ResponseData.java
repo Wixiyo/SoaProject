@@ -1,5 +1,10 @@
 package com.example.demo.result;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 //返回结果数据格式封装
+@NoArgsConstructor
 public class ResponseData extends Response {
     private Object data;
 
