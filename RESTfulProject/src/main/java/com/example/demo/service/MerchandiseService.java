@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.dao.MerchandiseDao;
+import com.example.demo.repository.MerchandiseRepository;
 import com.example.demo.entity.Merchandise;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.Response;
@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class MerchandiseService {
     @Autowired
-    private MerchandiseDao merchandiseDao;
+    private MerchandiseRepository merchandiseRepository;
 
     protected Response result(ExceptionMsg msg){
         return new Response(msg);
@@ -24,22 +24,22 @@ public class MerchandiseService {
     }
 
     public Merchandise findMerchandiseById(long id) {
-        return merchandiseDao.findById(id);
+        return merchandiseRepository.findById(id);
     }
 
     public ResponseData update(Merchandise model) {
-        merchandiseDao.save(model);
+        merchandiseRepository.save(model);
         return new ResponseData(ExceptionMsg.SUCCESS,model);
     }
 
     public ResponseData add(Merchandise merchandise) {
-        merchandiseDao.save(merchandise);
+        merchandiseRepository.save(merchandise);
         // return "{success:true,message: \"添加成功\" }";
         return new ResponseData(ExceptionMsg.SUCCESS,merchandise);
     }
 
     public ResponseData findMerchandiseByTitle(String title) {
-        List<Merchandise> merchandises = new ArrayList<Merchandise>(merchandiseDao.findByTitle(title));
+        List<Merchandise> merchandises = new ArrayList<Merchandise>(merchandiseRepository.findByTitle(title));
         if (merchandises.size() != 0) {
             return new ResponseData(ExceptionMsg.SUCCESS,merchandises);
         }
@@ -47,7 +47,7 @@ public class MerchandiseService {
     }
     //全部查询
     public ResponseData  getMerchandiseList() {
-        List<Merchandise> list = new ArrayList<Merchandise>(merchandiseDao.findAll());
+        List<Merchandise> list = new ArrayList<Merchandise>(merchandiseRepository.findAll());
         return new ResponseData(ExceptionMsg.SUCCESS,list);
 
     }
@@ -59,7 +59,7 @@ public class MerchandiseService {
         Map map= new HashMap();
         map. put ("orderid",id);
         Void article = client.delete(uri,map,id);*/
-        merchandiseDao.deleteById(id);
+        merchandiseRepository.deleteById(id);
 
         return result(ExceptionMsg.SUCCESS);
         //return new ResponseData(ExceptionMsg.SUCCESS,"");

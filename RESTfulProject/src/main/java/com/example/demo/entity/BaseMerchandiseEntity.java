@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import lombok.Data;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -31,6 +32,7 @@ import javax.persistence.MappedSuperclass;
  */
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
+@Data
 public abstract class BaseMerchandiseEntity {
     /*    @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
@@ -47,7 +49,6 @@ public abstract class BaseMerchandiseEntity {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private String updateTime;
 
-
     /*
      * 商家
      */
@@ -55,27 +56,4 @@ public abstract class BaseMerchandiseEntity {
     @CreatedBy
     private Long merchant;
 
-    public Long getCreateBy() {
-        return merchant;
-    }
-
-    public void setCreateBy(Long createBy) {
-        this.merchant = createBy;
-    }
-
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    public String getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
-    }
 }

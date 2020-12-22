@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rick | Mobile eCommerce HTML Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico">
+    <!-- CSS
+	============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/cssanimation.min.css">
+    <!-- IonRange slider CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/ion.rangeSlider.min.css">
+    <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
+    <!--
+		<link rel="stylesheet" href="assets/css/vendor.min.css">
+		<link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+		-->
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!--====================  preloader area ====================-->
+    <div class="preloader-activate preloader-active">
+        <div class="preloader-area-wrap">
+            <div class="spinner d-flex justify-content-center align-items-center h-100">
+                <div class="img-loader"></div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of preloader area  ====================-->
+    <div class="body-wrapper space-pt--70 space-pb--120">
+        <!--====================  header area ====================-->
+        <header>
+            <div class="header-wrapper border-bottom">
+                <div class="container space-y--15">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <!-- header logo -->
+                            <div class="header-logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <!-- header search -->
+                            <div class="input-group">
+                                <input type="text" placeholder="搜索" class="form-control" id=search-input>
+                                <div class="input-group-append">
+                                  <button type="button" class="btn btn-primary" id=search-button><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <!-- header menu trigger -->
+                            <button class="header-menu-trigger" id="header-menu-trigger">
+                                <img src="assets/img/icons/menu.svg" class="injectable" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--====================  End of header area  ====================-->
+        <!--====================  mobile menu overlay ====================-->
+        <div class="offcanvas-menu" id="offcanvas-menu">
+            <div class="profile-card text-center">
+                <div class="profile-card__image space-mb--10">
+                </div>
+                <div class="profile-card__content">
+                    <p class="name" id=user-name>未登录<span class="id" id=user-id>000</span></p>
+                </div>
+            </div>
+            <div class="offcanvas-navigation-wrapper space-mt--40">
+                <ul class="offcanvas-navigation">
+                    <li><span class="icon"><img src="assets/img/icons/profile.svg" class="injectable" alt=""></span><a href="login.html">登录/注册</a></li>
+                    <li><span class="icon"><img src="assets/img/icons/profile-two.svg" class="injectable" alt=""></span><a href="profile.html">我的资料</a></li>
+                    <li><span class="icon"><img src="assets/img/icons/notification.svg" class="injectable" alt=""></span><a href="notification.html">通知</a></li>
+                    <li><span class="icon"><img src="assets/img/icons/product.svg" class="injectable" alt=""></span><a href="shop.html">全部商品</a></li>
+                    <li><span class="icon"><img src="assets/img/icons/cart-two.svg" class="injectable" alt=""></span><a href="order.html">我的订单</a></li>
+                    <li><span class="icon"><img src="assets/img/icons/cart-three.svg" class="injectable" alt=""></span><a href="cart.html">购物车</a></li>
+                    <li><span class="icon"><img src="assets/img/icons/wishlist.svg" class="injectable" alt=""></span><a href="wishlist.html">收藏夹</a></li>
+                    <li><span class="icon"><img src="assets/img/icons/gear-two.svg" class="injectable" alt=""></span><a href="edit-profile.html">设置</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--====================  End of mobile menu overlay  ====================-->
+        <!--====================  product image slider ====================-->
+        <div class="product-image-slider-wrapper space-pb--30 space-mb--30">
+            <div class="product-image-single">
+                <img src="assets/img/product-slider/product1.png" class="img-fluid" alt="">
+            </div>
+            <div class="product-image-single">
+                <img src="assets/img/product-slider/product2.png" class="img-fluid" alt="">
+            </div>
+            <div class="product-image-single">
+                <img src="assets/img/product-slider/product3.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        <!--====================  End of product image slider  ====================-->
+        <!--====================  product content ====================-->
+        <!-- product content header -->
+        <div class="product-content-header-area border-bottom--thick space-pb--30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product-content-header">
+                            <div class="product-content-header__main-info">
+                                <h3 class="title">Lather Demo Bag Name</h3>
+                                <div class="price">
+                                    <span class="main-price">$460</span>
+                                    <span class="discounted-price">$320</span>
+                                </div>
+                                <div class="rating">
+                                    <ul class="rating__stars">
+                                        <li><img src="assets/img/icons/star.svg" class="injectable" alt=""></li>
+                                        <li><img src="assets/img/icons/star.svg" class="injectable" alt=""></li>
+                                        <li><img src="assets/img/icons/star.svg" class="injectable" alt=""></li>
+                                        <li><img src="assets/img/icons/star.svg" class="injectable" alt=""></li>
+                                        <li><img src="assets/img/icons/star.svg" class="injectable" alt=""></li>
+                                    </ul>
+                                    <span class="rating__text">6</span>
+                                </div>
+                            </div>
+                            <div class="product-content-header__wishlist-info text-center">
+                                <img src="assets/img/icons/heart-dark.svg" class="injectable" alt="">
+                                <span class="count">10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- product content description -->
+        <div class="product-content-description border-bottom--thick space-pt--25 space-pb--25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="space-mb--25">There are many variations of passages of Lorem <br> Ipsum available, but the majority have suffered alteration.</p>
+                            <h4 class="space-mb--5">Free Shipping</h4>
+                            <p>To Bangladesh from seller via china. Shipping <br> method online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- product content safety -->
+        <div class="product-content-safety border-bottom--thick space-pt--15 space-pb--15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h4><img src="assets/img/icons/security.svg" class="injectable" alt=""> Secure Payment Method.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- product color picker -->
+        <div class="product-color-picker border-bottom--thick space-pt--25 space-pb--25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="space-mb--20">Color Select</h3>
+                        <form>
+                            <ul class="color-picker">
+                                <li>
+                                    <input id="black" type="radio" name="color" value="black" checked>
+                                    <label class="black" for="black"></label>
+                                </li>
+                                <li>
+                                    <input id="blue" type="radio" name="color" value="blue">
+                                    <label class="blue" for="blue"></label>
+                                </li>
+                                <li>
+                                    <input id="pink" type="radio" name="color" value="pink">
+                                    <label class="pink" for="pink"></label>
+                                </li>
+                                <li>
+                                    <input id="brown" type="radio" name="color" value="brown">
+                                    <label class="brown" for="brown"></label>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- product content description -->
+        <div class="product-content-description space-pt--25 space-pb--25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="space-mb--5">Specification</h4>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit
+                            voluptatem accusantium doloremque laudantium, totam
+                            rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                            et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- shop product button -->
+        <div class="shop-product-button">
+            <button class="cart">添加到购物车</button>
+            <button class="buy">立刻购买</button>
+        </div>
+        <!--====================  End of product content  ====================-->
+        <!--====================  footer area ====================-->
+        <footer>
+            <div class="footer-nav-wrapper">
+                <a href="index.html" class="footer-nav-single">
+                    <div class="menu-wrapper">
+                        <img src="assets/img/icons/home.svg" class="injectable" alt="">
+                        <div></div>
+                        <span>主页</span>
+                    </div>
+                </a>
+                <a href="chat.html" class="footer-nav-single">
+                    <div class="menu-wrapper">
+                        <img src="assets/img/icons/chat.svg" class="injectable" alt="">
+                        <div></div>
+                        <span>客服</span>
+                    </div>
+                </a>
+                <a href="cart.html" class="footer-nav-single">
+                    <div class="menu-wrapper">
+                        <img src="assets/img/icons/cart.svg" class="injectable" alt="">
+                        <div></div>
+                        <span>购物车</span>
+                    </div>
+                </a>
+                <a href="profile.html" class="footer-nav-single">
+                    <div class="menu-wrapper">
+                        <img src="assets/img/icons/profile.svg" class="injectable" alt="">
+                        <div></div>
+                        <span>资料</span>
+                    </div>
+                </a>
+            </div>
+        </footer>
+        <!--====================  End of footer area  ====================-->
+    </div>
+    <!-- JS
+    ============================================ -->
+    <!-- Modernizer JS -->
+    <script src="assets/js/modernizr-2.8.3.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- IonRanger JS -->
+    <script src="assets/js/plugins/ion.rangeSlider.min.js"></script>
+    <!-- SVG inject JS -->
+    <script src="assets/js/plugins/svg-inject.min.js"></script>
+    <!-- Slick slider JS -->
+    <script src="assets/js/plugins/slick.min.js"></script>
+    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+    <!--
+  <script src="assets/js/plugins/plugins.min.js"></script>
+-->
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

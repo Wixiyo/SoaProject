@@ -1,5 +1,5 @@
 package com.example.demo.controller;
-import com.example.demo.dao.MerchandiseDao;
+import com.example.demo.repository.MerchandiseRepository;
 import com.example.demo.entity.Merchandise;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.Response;
@@ -26,7 +26,7 @@ public class MerchandiseController {
     }
 
     @Autowired
-    private MerchandiseDao merchandiseRepository;
+    private MerchandiseRepository merchandiseRepository;
     @Autowired
     private MerchandiseService merchandiseService;
     @Autowired
