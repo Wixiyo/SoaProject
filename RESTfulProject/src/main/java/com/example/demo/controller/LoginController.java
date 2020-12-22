@@ -25,7 +25,6 @@ public class LoginController {
                                  @FormParam("age") String age,@FormParam("password") String password,
                                  @FormParam("phone") String phone) {
         User user = new User();
-        user.setAge(age);
         user.setPassword(password);
         user.setUserId(userId);
         user.setUserName(username);
