@@ -22,7 +22,7 @@ public class LoginController {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/register")
     public ResponseData register(@FormParam("userId") String userId,@FormParam("userName") String username,
-                                 @FormParam("age") String age,@FormParam("password") String password,
+                                 @FormParam("password") String password,
                                  @FormParam("phone") String phone) {
         User user = new User();
         user.setPassword(password);
