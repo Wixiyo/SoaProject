@@ -7,14 +7,16 @@ import com.example.demo.result.ResponseData;
 import com.example.demo.service.MerchandiseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import java.io.IOException;
 
 
 @RestController
 @RequestMapping("merchandise")
-@CrossOrigin(origins = "*", maxAge = 3600)//用于ajax访问
 public class MerchandiseController {
     protected Response result(ExceptionMsg msg){
         return new Response(msg);
