@@ -89,11 +89,8 @@
   ]
   });
 
-  $("#login-button").click(function(){
-    $.cookie('emailAddress',$("#emailAddress").val(),{ expires: 7, path: '/' });
-    $.cookie('name','value',{ expires: 7, path: '/' });
-    //alert($.cookie('emailAddress'));
-  });
+
+
 
   $("#search-button").click(function(){
     $.ajax({
@@ -121,7 +118,9 @@
   });
 
   $("#user-id").ready(function(){
+    //$('#user-id').text($.cookie('emailAddress'));
     $('#user-id').text($.cookie('emailAddress'));
+    $('#user-name').text($.cookie('name'));
   });
   
   /* price range */

@@ -1,47 +1,50 @@
 package com.example.demo.controller;
 
+import com.example.demo.entity.Merchandise;
 import com.example.demo.entity.User;
+import com.example.demo.repository.MerchandiseRepository;
+import com.example.demo.repository.UserRepository;
+import com.example.demo.result.ExceptionMsg;
+import com.example.demo.result.Response;
 import com.example.demo.result.ResponseData;
+import com.example.demo.service.MerchandiseService;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import java.util.HashMap;
-import java.util.Map;
-
-@Path("/login")
+@RestController
+@RequestMapping("login")
+@CrossOrigin(origins = "*", maxAge = 3600)//用于ajax访问
 public class LoginController {
 
-    @Autowired
-    protected UserService userService;
+    protected Response result(ExceptionMsg msg){
+        return new Response(msg);
+    }
+    protected Response result(){
+        return new Response();
+    }
 
-    @POST
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("/register")
-    public ResponseData register(@FormParam("userId") String userId,@FormParam("userName") String username,
-                                 @FormParam("password") String password,
-                                 @FormParam("phone") String phone) {
-        User user = new User();
-        user.setPassword(password);
-        user.setUserId(userId);
-        user.setUserName(username);
-        user.setPhone(phone);
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    RestTemplateBuilder restTemplateBuilder;
+    @Autowired
+    UserService userService;
+
+    //增
+    @RequestMapping(value = "register", method = RequestMethod.POST)
+    public ResponseData add(User user) {
         return userService.add(user);
     }
 
-    @Path("login")
-    @POST
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    @Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
-    public User postUser(@FormParam("userName") String username){
-        User user = new User();
-        System.out.println(username);
-        user.setUserName(username);
-        user.setPassword("涛哥");
-        return user;
+    //查
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+    public ResponseData login() {
+        return userService.check();
     }
 
 }

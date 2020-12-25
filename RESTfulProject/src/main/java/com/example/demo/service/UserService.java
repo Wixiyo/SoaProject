@@ -15,12 +15,18 @@ public class UserService {
 
     public ResponseData update(User model) {
         userRepository.save(model);
-        return new ResponseData(ExceptionMsg.SUCCESS,model);
+        return new ResponseData(ExceptionMsg.SUCCESS, model);
     }
 
     public ResponseData add(User user) {
         userRepository.save(user);
         // return "{success:true,message: \"添加成功\" }";
-        return new ResponseData(ExceptionMsg.SUCCESS,user);
+        return new ResponseData(ExceptionMsg.SUCCESS, user);
+    }
+
+    public ResponseData check() {
+        //userRepository.check();
+        String a = "cg";
+        return new ResponseData(ExceptionMsg.SUCCESS, a);
     }
 }

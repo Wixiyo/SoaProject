@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.repository.MerchandiseRepository;
 import com.example.demo.entity.Merchandise;
+import com.example.demo.repository.UserRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.Response;
 import com.example.demo.result.ResponseData;
@@ -15,6 +16,7 @@ import java.util.List;
 public class MerchandiseService {
     @Autowired
     private MerchandiseRepository merchandiseRepository;
+    private UserRepository userRepository;
 
     protected Response result(ExceptionMsg msg){
         return new Response(msg);
@@ -49,7 +51,6 @@ public class MerchandiseService {
     public ResponseData  getMerchandiseList() {
         List<Merchandise> list = new ArrayList<Merchandise>(merchandiseRepository.findAll());
         return new ResponseData(ExceptionMsg.SUCCESS,list);
-
     }
     //删
     public Response delete(@PathVariable("id") long id) {
