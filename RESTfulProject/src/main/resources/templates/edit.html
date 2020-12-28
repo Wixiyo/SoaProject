@@ -17,26 +17,26 @@
 <body class="container">
 
 
-<form class="form-horizontal" th:action="@{/article/}+${article.id}" method="post">
+<form class="form-horizontal" th:action="@{/book/}+${book.id}" method="post">
     <input type="hidden" name="_method" value="put"/>
 
 
-    <input type="hidden" id="id" name="id" th:field="${article.id}"/>
-    <input type="hidden" id="createTime" name="createTime" th:field="${article.createTime}"/>
+    <input type="hidden" id="id" name="id" th:field="${book.id}"/>
+    <input type="hidden" id="createTime" name="createTime" th:field="${book.createTime}"/>
     <input type="hidden" id="createBy" name="createBy"
-           th:field="${article.createBy}"
+           th:field="${book.createBy}"
     />
     <div class="form-group">
         <label for="title" class="col-sm-2 control-label">title</label>
         <div class="col-sm-10">
-            <input type="text" id="title" name="title" th:field="${article.title}"/>
+            <input type="text" id="title" name="title" th:field="${book.title}"/>
         </div>
     </div>
 
     <div class="form-group">
         <label for="body" class="col-sm-2 control-label">body</label>
         <div class="col-sm-10">
-            <input type="text" id="body" name="body" th:field="${article.body}"/>
+            <input type="text" id="body" name="body" th:field="${book.body}"/>
         </div>
     </div>
 

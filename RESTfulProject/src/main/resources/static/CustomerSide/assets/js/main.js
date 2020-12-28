@@ -89,10 +89,7 @@
   ]
   });
 
-
-
-
-  $("#search-button").click(function(){
+  /*$("#search-button").click(function(){
     $.ajax({
       url:"http://localhost:8080/merchandise/",// 发送请求的URL字符串。
       data:{// 发送到服务器的数据。
@@ -115,7 +112,7 @@
         alert("系统ajax交互错误: " + textStatus);
       }
     });
-  });
+  });*/
 
   $("#user-id").ready(function(){
     //$('#user-id').text($.cookie('emailAddress'));

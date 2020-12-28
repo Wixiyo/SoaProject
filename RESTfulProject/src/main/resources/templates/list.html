@@ -52,17 +52,17 @@
 
 
                     <td>
-                        <a th:href="@{'/article/'+${item.id}}" class="btn btn-outline-info">查看</a>
+                        <a th:href="@{'/book/'+${item.id}}" class="btn btn-outline-info">查看</a>
 
-                        <a th:href="@{'/article/edit/'+${item.id}}" class="btn btn-outline-success">编辑</a>
+                        <a th:href="@{'/book/edit/'+${item.id}}" class="btn btn-outline-success">编辑</a>
 
                         <!--  <a th:href="@{/admin/system/delete(id=${item.id})}" class="btn btn-outline-danger">删除</a>-->
                         <!-- 偏重的删除代码-->
-                        <!--<form th:action="@{'/admin/article/'+${item.id}}"   method="post" style=" margin:0px; display: inline">
+                        <!--<form th:action="@{'/admin/book/'+${item.id}}"   method="post" style=" margin:0px; display: inline">
                             <input type="hidden" name="_method" value="DELETE"/>
                             <input type="submit" class="btn btn-outline-danger" value="删除"/>
                         </form>-->
-                        <button th:attr="del_uri=@{/article/}+${item.id}" class="btn btn-outline-danger deleteBtn">删除
+                        <button th:attr="del_uri=@{/book/}+${item.id}" class="btn btn-outline-danger deleteBtn">删除
                         </button>
 
                     </td>
@@ -78,10 +78,10 @@
             <input type="hidden" name="_method" value="delete"/>
         </form>
         <div>
-            <a th:href="@{/article(start=0)}">[首页]</a>
-            <a th:if="${not page.isFirst()}" th:href="@{/article(start=${page.number-1})}">[上页]</a>
-            <a th:if="${not page.isLast()}" th:href="@{/article(start=${page.number+1})}">[下页]</a>
-            <a th:href="@{/article(start=${page.totalPages-1})}">[末页]</a>
+            <a th:href="@{/book(start=0)}">[首页]</a>
+            <a th:if="${not page.isFirst()}" th:href="@{/book(start=${page.number-1})}">[上页]</a>
+            <a th:if="${not page.isLast()}" th:href="@{/book(start=${page.number+1})}">[下页]</a>
+            <a th:href="@{/book(start=${page.totalPages-1})}">[末页]</a>
         </div>
     </div>
 </div>

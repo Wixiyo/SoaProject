@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.Getter;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Copyright (C), 2019-2019, XXX有限公司
@@ -17,13 +18,15 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "artitcle")
+@Table(name = "book")
 @Data
-public class Article {
+public class Book extends Item{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long bookId;
     private String title;
+    private String author;
     private String body;
+
 
 }
