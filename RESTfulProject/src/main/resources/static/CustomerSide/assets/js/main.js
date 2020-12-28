@@ -120,10 +120,6 @@
     $('#user-name').text($.cookie('name'));
   });
 
-  $("#book_name").click(function(){
-     alert("图片已载入");
-  });
-
   /* price range */
 
   $('#price-range-slider').ionRangeSlider({
