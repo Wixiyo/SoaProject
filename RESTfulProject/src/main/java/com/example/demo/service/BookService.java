@@ -1,8 +1,10 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.Book;
+import com.example.demo.entity.Cart;
 import com.example.demo.entity.Merchandise;
 import com.example.demo.repository.BookRepository;
+import com.example.demo.repository.CartRepository;
 import com.example.demo.repository.MerchandiseRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.ResponseData;
@@ -17,6 +19,8 @@ public class BookService {
 
     @Autowired
     private BookRepository bookRepository;
+    @Autowired
+    private CartRepository cartRepository;
 
     public ResponseData findBookByTitle(String title) {
         List<Book> books = new ArrayList<Book>(bookRepository.findByTitle(title));
@@ -24,5 +28,10 @@ public class BookService {
             return new ResponseData(ExceptionMsg.SUCCESS,books);
         }
         return new ResponseData(ExceptionMsg.FAILED,books);
+    }
+
+    public ResponseData addtocart(Cart cart){
+        cartRepository.save(cart);
+        return new ResponseData(ExceptionMsg.FAILED,cart);
     }
 }
