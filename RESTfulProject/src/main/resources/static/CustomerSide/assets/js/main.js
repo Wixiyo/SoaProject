@@ -2,11 +2,11 @@
   "use strict";
 
   $(window).on('load', function () {
-    
+
     /* preloader activate */
     $(".preloader-activate").removeClass('preloader-active');
   });
-  
+
   /* offcanvas menu active */
   $("#header-menu-trigger").on("click", function(e){
     e.stopPropagation();
@@ -14,7 +14,7 @@
     $(".body-wrapper").toggleClass("active-overlay");
     $("body").toggleClass("overflow-hidden");
   });
-  
+
   /* shop filter menu active */
   $("#filter-trigger").on("click", function(e){
     e.stopPropagation();
@@ -25,7 +25,7 @@
     e.stopPropagation();
     $("#shop-filter-menu").slideUp();
   });
-  
+
   /* remove active class on click other parts of the body */
   $('body').on('click', function(){
     $("#offcanvas-menu").removeClass("active");
@@ -45,7 +45,7 @@
   });
 
   /* slick slider activation */
-  
+
   $('.hero-slider-wrapper').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -54,7 +54,7 @@
     autoplay: true,
     autoplaySpeed: 5000
   });
-  
+
   $('.welcome-slider-wrapper').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -70,7 +70,7 @@
     dots: true,
     arrows: false
   });
-  
+
   $('.category-slider-wrapper').slick({
     slidesToShow: 5,
     slidesToScroll: 5,
@@ -119,7 +119,11 @@
     $('#user-id').text($.cookie('emailAddress'));
     $('#user-name').text($.cookie('name'));
   });
-  
+
+  $("#book_name").click(function(){
+     alert("图片已载入");
+  });
+
   /* price range */
 
   $('#price-range-slider').ionRangeSlider({
@@ -132,9 +136,9 @@
 		to: 440
     });
 
-    
+
     /* cart plus minus */
-    
+
     var CartPlusMinus = $('.cart-plus-minus');
     CartPlusMinus.prepend('<div class="dec qtybutton">-</div>');
     CartPlusMinus.append('<div class="inc qtybutton">+</div>');
