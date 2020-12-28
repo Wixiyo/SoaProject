@@ -39,7 +39,7 @@ $("#book_name").ready(function(){
             async:  true , // 默认设置下，所有请求均为异步请求。如果设置为false，则发送同步请求
             // 请求成功后的回调函数。
             success :function(data){
-
+                alert(data.rspMsg);
             },
             // 请求出错时调用的函数
             error : function(textStatus, errorThrown) {

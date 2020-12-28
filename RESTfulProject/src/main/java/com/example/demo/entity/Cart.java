@@ -6,13 +6,12 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "cart")
+@IdClass(CartUPK.class)
 @Data
 public class Cart {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
     private String userId;
 
+    @Id
     private long bookId;
 }
