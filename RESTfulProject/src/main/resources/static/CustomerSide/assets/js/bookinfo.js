@@ -3,7 +3,7 @@
 $("#book_name").ready(function(){
 
     $.ajax({
-        url:"http://localhost:8080/bookinfo/999",// 发送请求的URL字符串。
+        url:"http://localhost:8080/bookinfo/天龙八部",// 发送请求的URL字符串。
         type : "get", //  请求方式 POST或GET
         dataType : "json", // 预期服务器返回的数据类型。
         async:  true , // 默认设置下，所有请求均为异步请求。如果设置为false，则发送同步请求
