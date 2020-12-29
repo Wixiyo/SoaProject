@@ -9,13 +9,13 @@
 </head>
 <body>
  <div class="wrap">
-  <div class="page-title">
+  <div class="page-title" id="product_head">
     <span class="modular fl"><i></i><em>书籍列表</em></span>
     <span class="modular fr"><a href="edit_product.html" class="pt-link-btn">+添加书籍</a></span>
   </div>
   <div class="operate">
    <form>
-    <input type="text" class="textBox length-long" placeholder="输入书籍名称..."/>
+    <input type="text" class="textBox length-long" placeholder="输入书籍名称..." id="search_book_title"/>
     <input type="button" value="查询" class="tdBtn" id="search_product"/>
    </form>
   </div>
@@ -30,6 +30,7 @@
     <th>条码</th>
     <th>操作</th>
    </tr>
+   <!-- 示例
    <tr id="the_book1">
     <td>
      <span>
@@ -74,16 +75,10 @@
      <a title="删除"><img src="images/icon_drop.gif"/></a>
     </td>
    </tr>
-
+   -->
   </table>
   <!-- BatchOperation -->
   <div style="overflow:hidden;">
-      <!-- Operation -->
-	  <div class="BatchOperation fl">
-	   <input type="checkbox" id="del"/>
-	   <label for="del" class="btnStyle middle">全选</label>
-	   <input type="button" value="批量删除" class="btnStyle"/>
-	  </div>
 	  <!-- turn page -->
 	  <div class="turnPage center fr">
 	   <a>第一页</a>
