@@ -1,5 +1,4 @@
 $("#search_product").click(function (){
-
     $("#product_list").empty();
     var title=$("#search_book_title").val();
     var binfo;
@@ -11,9 +10,19 @@ $("#search_product").click(function (){
         // 请求成功后的回调函数。
         success :function(data){
             binfo=data;
+            $("#product_list").append('<tr>\n' +
+                '    <th>ID编号</th>\n' +
+                '    <th>书名</th>\n' +
+                '    <th>描述</th>\n' +
+                '    <th>作者</th>\n' +
+                '    <th>价格</th>\n' +
+                '    <th>库存</th>\n' +
+                '    <th>条码</th>\n' +
+                '    <th>操作</th>\n' +
+                '   </tr>');
             for (var i=0;i<binfo.data.length;i++)
             {
-                $("#product_list").append('<tr id="the_book'+i+'">\n' +
+                $("#product_list").append('<tr class="book" id="the_book'+i+'">\n' +
                     '    <td>\n' +
                     '     <span>\n' +
                     '     <i id="book_id">0</i>\n' +

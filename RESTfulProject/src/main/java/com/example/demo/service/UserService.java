@@ -24,9 +24,13 @@ public class UserService {
         return new ResponseData(ExceptionMsg.SUCCESS, user);
     }
 
-    public ResponseData check() {
-        //userRepository.check();
-        String a = "cg";
-        return new ResponseData(ExceptionMsg.SUCCESS, a);
+    public ResponseData check(String id,String password) {
+        User user = userRepository.findUser(id);
+        if(user.getPassword().equals(password)){
+            return new ResponseData(ExceptionMsg.SUCCESS, user);
+        }
+        else {
+            return new ResponseData(ExceptionMsg.FAILED, id);
+        }
     }
 }

@@ -11,10 +11,7 @@ import com.example.demo.service.MerchandiseService;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("login")
@@ -42,9 +39,9 @@ public class LoginController {
     }
 
     //查
-    @RequestMapping(value = "login", method = RequestMethod.GET)
-    public ResponseData login() {
-        return userService.check();
+    @RequestMapping(value = "/{id}/{password}", method = RequestMethod.GET)
+    public ResponseData login(@PathVariable("id") String i,@PathVariable("password") String p) {
+        return userService.check(i,p);
     }
 
 }

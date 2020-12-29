@@ -29,6 +29,20 @@ public class BookService {
         }
         return new ResponseData(ExceptionMsg.FAILED,books);
     }
+    public ResponseData findBookById(long id) {
+        Book book = bookRepository.findById(id);
+        if (book != null) {
+            return new ResponseData(ExceptionMsg.SUCCESS,book);
+        }
+        return new ResponseData(ExceptionMsg.FAILED,book);
+    }
+    public ResponseData findAllBook() {
+        List<Book> books = new ArrayList<Book>(bookRepository.findAll());
+        if (books.size() != 0) {
+            return new ResponseData(ExceptionMsg.SUCCESS,books);
+        }
+        return new ResponseData(ExceptionMsg.FAILED,books);
+    }
 
     public ResponseData addtocart(Cart cart){
         cartRepository.save(cart);

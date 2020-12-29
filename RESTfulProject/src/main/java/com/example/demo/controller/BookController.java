@@ -29,10 +29,20 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    //查
+    //按名查找
     @RequestMapping(value = "/{title}", method = RequestMethod.GET)
     public ResponseData findBook(@PathVariable("title") String title) throws IOException {
         return bookService.findBookByTitle(title);
+    }
+    //按id查找
+    @RequestMapping(value = "/id/{id}", method = RequestMethod.GET)
+    public ResponseData findBookById(@PathVariable("id") long id) throws IOException {
+        return bookService.findBookById(id);
+    }
+    //查询全部
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ResponseData findAllBook() throws IOException {
+        return bookService.findAllBook();
     }
     //增
     @RequestMapping(value = "/addtocart", method = RequestMethod.POST)
