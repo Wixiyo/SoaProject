@@ -9,6 +9,9 @@ import javax.persistence.*;
 @Data
 public class Cart {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
     private String userId;
 
     private long bookId;

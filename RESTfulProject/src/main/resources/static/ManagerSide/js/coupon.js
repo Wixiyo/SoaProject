@@ -19,6 +19,9 @@
                 alert("系统ajax交互错误: " + textStatus);
             }
         });
+    });
+    $("#add_coupon_button").click(function (){
+        alert("55");
     })
 
 })(jQuery);

@@ -7,15 +7,17 @@ import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.ResponseData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public ResponseData update(User model) {
-        userRepository.save(model);
-        return new ResponseData(ExceptionMsg.SUCCESS, model);
+    public ResponseData update(User user) {
+        userRepository.update(user.getUserName(), user.getAddress(), user.getPhone(), user.getUserId());
+        return new ResponseData(ExceptionMsg.SUCCESS, user);
     }
 
     public ResponseData add(User user) {

@@ -20,7 +20,7 @@
                 alert("欢迎："+data.data.userName);
                 $.cookie('emailAddress',$("#emailAddress").val(),{ expires: 7, path: '/' });
                 $.cookie('name',data.data.userName,{ expires: 7, path: '/' });
-                $(location).attr('href', 'index2.html');
+                $(location).attr('href', 'index.html');
             },
             // 请求出错时调用的函数
             error : function(textStatus, errorThrown) {
@@ -41,7 +41,9 @@
                 if(data.rspCode==="000"){
                     $.cookie('emailAddress',$("#emailAddress").val(),{ expires: 7, path: '/' });
                     $.cookie('name',data.data.userName,{ expires: 7, path: '/' });
-                    $(location).attr('href', 'index2.html');
+                    $.cookie('address',data.data.address,{ expires: 7, path: '/' });
+                    $.cookie('phone',data.data.phone,{ expires: 7, path: '/' });
+                    $(location).attr('href', 'index.html');
                 }
             },
             // 请求出错时调用的函数

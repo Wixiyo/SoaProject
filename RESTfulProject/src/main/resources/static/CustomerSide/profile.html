@@ -100,12 +100,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="profile-header">
+                        <div class="profile-header" id="profile-header">
                             <div class="profile-header__image">
                                 <img src="assets/img/profile.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="profile-header__content space-mt--10">
-                                <h3 class="name space-mb--15">XXX</h3>
+                                <h3 class="name space-mb--15" id="name">XXX</h3>
                                 <div class="profile-info space-mb--10">
                                     <div class="profile-info-block">
                                         <div class="profile-info-block__value">
@@ -113,14 +113,9 @@
                                         </div>
                                     </div>
                                     <div class="profile-info-block">
-                                        <div class="profile-info-block__value">
+                                        <div class="profile-info-block__value" id="id">
                                             000
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="profile-level">
-                                    <div class="profile-level__title">
-                                        会员
                                     </div>
                                 </div>
                             </div>
@@ -139,20 +134,20 @@
                             <div class="profile-info-table space-mb--40">
                                 <div class="profile-info-block">
                                     <div class="profile-info-block__title">邮箱</div>
-                                    <div class="profile-info-block__value">demo@mail.com</div>
+                                    <div class="profile-info-block__value" id="email">demo@mail.com</div>
                                 </div>
                                 <div class="profile-info-block">
                                     <div class="profile-info-block__title">昵称</div>
-                                    <div class="profile-info-block__value">john007</div>
+                                    <div class="profile-info-block__value" id="t_name">john007</div>
                                 </div>
                                 <div class="profile-info-block">
                                     <div class="profile-info-block__title">手机号码</div>
-                                    <div class="profile-info-block__value">(+86) 15366985314</div>
+                                    <div class="profile-info-block__value" id="phone">(+86) 15366985314</div>
                                 </div>
                                 
                                 <div class="profile-info-block">
                                     <div class="profile-info-block__title">送货地址</div>
-                                    <div class="profile-info-block__value">XXX XXX</div>
+                                    <div class="profile-info-block__value" id="address">XXX XXX</div>
                                 </div>
                                 <div class="profile-info-block">
                                     <div class="profile-info-block__title">编辑资料</div>
@@ -213,5 +208,7 @@
 -->
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/profile.js"></script>
+    <script src="assets/js/jquery.cookie.js"></script>
 </body>
 </html>
