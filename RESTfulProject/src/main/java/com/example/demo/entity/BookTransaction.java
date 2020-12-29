@@ -8,13 +8,10 @@ import javax.persistence.*;
 @Table(name = "booktransaction")
 @Data
 public class BookTransaction extends Transaction{
+    @Column(nullable = false,length = 15)
+    private String userId;
 
-    @JoinColumn(name="USER_ID")//关联user表的字段
-    @ManyToOne
-    private User user;
-
-    @JoinColumn(name="book_ID")
-    @ManyToOne
-    private Book book;
+    @Column(nullable = false)
+    private long bookId;
 
 }

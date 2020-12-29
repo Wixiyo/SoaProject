@@ -30,8 +30,8 @@ $("#book_name").ready(function(){
             data:{// 发送到服务器的数据。
                 //bookId:$.cookie("bookId"),
                 //userId:$.cookie("userId"),
+                userId:"bbc",
                 bookId:1,
-                userId:"abc",
             },
             contentType: "application/x-www-form-urlencoded; charset=utf-8",
             type : "post", //  请求方式 POST或GET

@@ -22,4 +22,6 @@ public class User {
     @Column(nullable = false)
     private String userName;
 
+    private String address;
+
 }

@@ -32,6 +32,6 @@ public class BookService {
 
     public ResponseData addtocart(Cart cart){
         cartRepository.save(cart);
-        return new ResponseData(ExceptionMsg.FAILED,cart);
+        return new ResponseData(ExceptionMsg.SUCCESS,cart);
     }
 }

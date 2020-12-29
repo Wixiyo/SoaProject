@@ -14,11 +14,12 @@ public class Coupon {
     private long id;
 
     @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
     private double takeoff;
 
     @Column(nullable = false)
     private double con;
 
-    @Column(nullable = false)
-    private Date expiration;
 }
