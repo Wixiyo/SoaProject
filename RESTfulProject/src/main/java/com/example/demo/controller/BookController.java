@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.entity.Book;
 import com.example.demo.entity.Cart;
 import com.example.demo.entity.Merchandise;
 import com.example.demo.repository.BookRepository;
@@ -9,6 +10,7 @@ import com.example.demo.result.Response;
 import com.example.demo.result.ResponseData;
 import com.example.demo.service.BookService;
 import com.example.demo.service.MerchandiseService;
+import com.example.demo.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,6 +30,8 @@ public class BookController {
     private BookRepository bookRepository;
     @Autowired
     private BookService bookService;
+    @Autowired
+    private OrderService orderService;
 
     //按名查找
     @RequestMapping(value = "/{title}", method = RequestMethod.GET)
@@ -49,4 +53,11 @@ public class BookController {
     public ResponseData addtocart(Cart cart) {
         return bookService.addtocart(cart);
     }
+
+    //增
+    @RequestMapping(value = "addBook", method = RequestMethod.POST)
+    public ResponseData addBook(Book book) {
+        return bookService.addbook(book);
+    }
+
 }

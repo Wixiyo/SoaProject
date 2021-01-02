@@ -8,11 +8,12 @@ import javax.persistence.*;
 @Table(name = "cart")
 @Data
 public class Cart {
+
+    private long id;
+
+    private String  userId;
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long  bookId;
 
-    private String userId;
-
-    private long bookId;
 }

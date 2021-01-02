@@ -85,7 +85,6 @@
                 <ul class="offcanvas-navigation">
                     <li><span class="icon"><img src="assets/img/icons/profile.svg" class="injectable" alt=""></span><a href="login.html">登录/注册</a></li>
                     <li><span class="icon"><img src="assets/img/icons/profile-two.svg" class="injectable" alt=""></span><a href="profile.html">我的资料</a></li>
-                    <li><span class="icon"><img src="assets/img/icons/notification.svg" class="injectable" alt=""></span><a href="notification.html">通知</a></li>
                     <li><span class="icon"><img src="assets/img/icons/product.svg" class="injectable" alt=""></span><a href="index.html">全部商品</a></li>
                     <li><span class="icon"><img src="assets/img/icons/cart-two.svg" class="injectable" alt=""></span><a href="order.html">我的订单</a></li>
                     <li><span class="icon"><img src="assets/img/icons/cart-three.svg" class="injectable" alt=""></span><a href="cart.html">购物车</a></li>
@@ -104,32 +103,14 @@
                         <a href="index.html" class="back-link"> <i class="fa fa-angle-left"></i> Back</a>
                     </div>
                     <div class="col-6">
-                        <h4 class="page-title text-center">我的订单</h4>
+                        <h4 class="page-title text-center" id="order_head">我的订单</h4>
                     </div>
                 </div>
             </div>
         </div>
         <!--====================  End of breadcrumb area  ====================-->
         <!--====================  order product area ====================-->
-        <div class="order-product-area">
-            <div class="cart-product border-bottom--medium">
-                <div class="cart-product__image">
-                    <a href="shop-product.html">
-                        <img src="assets/img/products/product1.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="cart-product__content">
-                    <h3 class="title"><a href="shop-product.html">Leather Bag</a></h3>
-                    <span class="category">Bag</span>
-                    <div class="price">
-                        <span class="main-price">$460</span>
-                        <span class="discounted-price">$320</span>
-                    </div>
-                </div>
-                <div class="cart-product__status">
-                    <p><span><i class="fa fa-check-circle-o"></i></span> 完成</p>
-                </div>
-            </div>
+        <div class="order-product-area" id="order_list">
             <div class="cart-product border-bottom--medium">
                 <div class="cart-product__image">
                     <a href="shop-product.html">
@@ -148,78 +129,7 @@
                     <p><span><i class="fa fa-refresh"></i></span> 退货</p>
                 </div>
             </div>
-            <div class="cart-product border-bottom--medium">
-                <div class="cart-product__image">
-                    <a href="shop-product.html">
-                        <img src="assets/img/products/product3.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="cart-product__content">
-                    <h3 class="title"><a href="shop-product.html">Sports shoe</a></h3>
-                    <span class="category">Show</span>
-                    <div class="price">
-                        <span class="main-price">$60</span>
-                        <span class="discounted-price">$20</span>
-                    </div>
-                </div>
-                <div class="cart-product__status">
-                    <p><span><i class="fa fa-times-circle-o"></i></span> 取消</p>
-                </div>
-            </div>
-            <div class="cart-product border-bottom--medium">
-                <div class="cart-product__image">
-                    <a href="shop-product.html">
-                        <img src="assets/img/products/product1.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="cart-product__content">
-                    <h3 class="title"><a href="shop-product.html">Leather Bag</a></h3>
-                    <span class="category">Bag</span>
-                    <div class="price">
-                        <span class="main-price">$460</span>
-                        <span class="discounted-price">$320</span>
-                    </div>
-                </div>
-                <div class="cart-product__status">
-                    <p><span><i class="fa fa-check-circle-o"></i></span> 完成</p>
-                </div>
-            </div>
-            <div class="cart-product border-bottom--medium">
-                <div class="cart-product__image">
-                    <a href="shop-product.html">
-                        <img src="assets/img/products/product2.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="cart-product__content">
-                    <h3 class="title"><a href="shop-product.html">Lipstick</a></h3>
-                    <span class="category">Cosmetics</span>
-                    <div class="price">
-                        <span class="main-price">$4</span>
-                        <span class="discounted-price">$3</span>
-                    </div>
-                </div>
-                <div class="cart-product__status">
-                    <p><span><i class="fa fa-refresh"></i></span> 退货</p>
-                </div>
-            </div>
-            <div class="cart-product border-bottom--medium">
-                <div class="cart-product__image">
-                    <a href="shop-product.html">
-                        <img src="assets/img/products/product3.png" class="img-fluid" alt="">
-                    </a>
-                </div>
-                <div class="cart-product__content">
-                    <h3 class="title"><a href="shop-product.html">Sports shoe</a></h3>
-                    <span class="category">Show</span>
-                    <div class="price">
-                        <span class="main-price">$60</span>
-                        <span class="discounted-price">$20</span>
-                    </div>
-                </div>
-                <div class="cart-product__status">
-                    <p><span><i class="fa fa-times-circle-o"></i></span> 取消</p>
-                </div>
-            </div>
+
         </div>
         <!--====================  End of order product area  ====================-->
         <!--====================  footer area ====================-->
@@ -271,6 +181,7 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/jquery.cookie.js"></script>
+    <script src="assets/js/order.js"></script>
 
 </body>
 </html>

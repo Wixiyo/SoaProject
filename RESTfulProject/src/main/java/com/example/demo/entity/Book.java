@@ -5,6 +5,7 @@ import lombok.Getter;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Copyright (C), 2019-2019, XXX有限公司
@@ -27,6 +28,5 @@ public class Book extends Item{
     private String title;
     private String author;
     private String body;
-
 
 }

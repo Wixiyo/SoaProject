@@ -3,9 +3,11 @@ package com.example.demo.service;
 import com.example.demo.entity.Book;
 import com.example.demo.entity.Cart;
 import com.example.demo.entity.Merchandise;
+import com.example.demo.entity.Order;
 import com.example.demo.repository.BookRepository;
 import com.example.demo.repository.CartRepository;
 import com.example.demo.repository.MerchandiseRepository;
+import com.example.demo.repository.OrderRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.ResponseData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,4 +50,10 @@ public class BookService {
         cartRepository.save(cart);
         return new ResponseData(ExceptionMsg.SUCCESS,cart);
     }
+
+    public ResponseData addbook(Book book){
+        bookRepository.save(book);
+        return new ResponseData(ExceptionMsg.SUCCESS,book);
+    }
+
 }

@@ -11,46 +11,50 @@
     <span class="modular fl"><i class="add"></i><em>编辑/添加产品</em></span>
     <span class="modular fr"><a href="product_list.html" class="pt-link-btn">产品列表</a></span>
   </div>
-  <form action="product_list.html">
   <table class="list-style">
    <tr>
+    <td style="text-align:right;width:15%;">书籍Id：</td>
+    <td><input type="text" class="textBox length-long" id="id"/></td>
+   </tr>
+   <tr>
     <td style="text-align:right;width:15%;">书籍名：</td>
-    <td><input type="text" class="textBox length-long"/></td>
+    <td><input type="text" class="textBox length-long" id="title"/></td>
    </tr>
    <tr>
     <td style="text-align:right;">作者：</td>
-    <td><input type="text" class="textBox length-long"/></td>
+    <td><input type="text" class="textBox length-long" id="author"/></td>
    </tr>
    <tr>
     <td style="text-align:right;">价格：</td>
     <td>
-     <input type="text" class="textBox length-short"/>
+     <input type="text" class="textBox length-short" id="Prize"/>
      <span>元</span>
     </td>
    </tr>
    <tr>
     <td style="text-align:right;">库存：</td>
     <td>
-     <input type="text" class="textBox length-short"/>
+     <input type="text" class="textBox length-short" id="Stock"/>
      <span>本</span>
     </td>
    </tr>
    <tr>
     <td style="text-align:right;">书籍条码：</td>
-    <td><input type="text" class="textBox length-long"/></td>
+    <td><input type="text" class="textBox length-long" id="Barcode"/></td>
    </tr>
    
    <tr>
     <td style="text-align:right;">书籍详情：</td>
-    <td><textarea class="textarea">...这里直接调用文本编辑器...移除此处的“textarea”即可</textarea></td>
+    <td><textarea class="textarea" id="body">...这里直接调用文本编辑器...移除此处的“textarea”即可</textarea></td>
    </tr>
-   <tr>
+   <tr >
     <td style="text-align:right;"></td>
-    <td><input type="submit" value="发布新书" class="tdBtn"/></td>
+    <td id="add_book"><input type="button" value="发布新书" class="tdBtn" /></td>
    </tr>
   </table>
-  </form>
  </div>
+ <script src="js/jquery.js"></script>
+ <script src="js/public.js"></script>
  <script src="js/product.js"></script>
 </body>
 </html>

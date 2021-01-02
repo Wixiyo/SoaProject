@@ -20,8 +20,17 @@ public class CartService {
     private BookRepository bookRepository;
 
     public ResponseData findBookByUserId(String user) {
-        Cart cart = cartRepository.findByUserId(user);
-        Book book = bookRepository.findById(cart.getBookId());
-        return new ResponseData(ExceptionMsg.SUCCESS,book);
+        //List<Cart> cart = cartRepository.findByUserId(user);
+        //Book book = bookRepository.findById(cart.getBookId());
+        //return new ResponseData(ExceptionMsg.SUCCESS,book);
+        List<Cart> carts = new ArrayList<Cart>(cartRepository.findByUserId(user));
+        List<Book> books = new ArrayList<Book>();
+        for(Cart c:carts){
+            books.add(bookRepository.findById(c.getBookId()));
+        }
+        if (books.size() != 0) {
+            return new ResponseData(ExceptionMsg.SUCCESS,books);
+        }
+        return new ResponseData(ExceptionMsg.FAILED,books);
     }
 }

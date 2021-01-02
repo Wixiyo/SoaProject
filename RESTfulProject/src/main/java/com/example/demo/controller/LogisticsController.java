@@ -3,6 +3,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Deal;
 
+import com.example.demo.result.ResponseData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
@@ -23,18 +24,17 @@ public class LogisticsController {
 
     @GET
     //@Path("/getLogistics/{nu}/{com}")
-    @Path("/getLogistics")
+    @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getUserXml() {
+    public String getUserXml(@PathParam("id") String id) {
         Deal deal=new Deal();
         //deal.setNu(nu);
         //deal.setCom(com);
-        String s = SearchLogistics(deal);
-        return s;
+        return SearchLogistics(id);
     }
-    private String SearchLogistics(Deal deal){
+    private String SearchLogistics(String nuo){
         RestTemplate client= restTemplateBuilder.build();
-        String a = "http://route.showapi.com/64-34?showapi_appid=451917&com=zhongtong&nu=75414074668446&callBackUrl=xxx&phone=&outCode=&showapi_sign=f8ca729443174ba1b73952f4c45b677c";
+        String a = "https://route.showapi.com/2435-1?showapi_appid=451917&nuo="+nuo+"&showapi_sign=f8ca729443174ba1b73952f4c45b677c";
         ResponseEntity<String> responseEntity = client.getForEntity(a,String.class);
         //ResponseEntity<String> responseEntity = client.getForEntity("http://route.showapi.com/64-34?showapi_appid=451917&com={1}&nu={2}&callBackUrl=xxx&phone=&outCode=&showapi_sign=f8ca729443174ba1b73952f4c45b677c", String.class,deal.getCom(),deal.getNu());
         return responseEntity.getBody();

@@ -10,5 +10,5 @@ import java.util.List;
 
 public interface CartRepository extends JpaRepository<Cart,Integer>, JpaSpecificationExecutor<Cart > {
     @Query("from Cart where userId=?1")
-    Cart findByUserId(String user);
+    List<Cart> findByUserId(String user);
 }

@@ -20,7 +20,4 @@ public abstract class Transaction {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private String Time;
 
-    @Column(nullable = false)
-    private int status;
-
 }
