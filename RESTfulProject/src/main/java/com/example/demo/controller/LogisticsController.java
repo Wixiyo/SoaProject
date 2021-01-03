@@ -7,6 +7,7 @@ import com.example.demo.result.ResponseData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 
@@ -17,16 +18,15 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 
-@Path("/logistics")
+@RestController
+@RequestMapping("logistics")
+@CrossOrigin(origins = "*", maxAge = 3600)//用于ajax访问
 public class LogisticsController {
     @Autowired
     RestTemplateBuilder restTemplateBuilder;
 
-    @GET
-    //@Path("/getLogistics/{nu}/{com}")
-    @Path("/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public String getUserXml(@PathParam("id") String id) {
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public String getUserXml(@PathVariable("id") String id) {
         Deal deal=new Deal();
         //deal.setNu(nu);
         //deal.setCom(com);

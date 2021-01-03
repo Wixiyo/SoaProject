@@ -15,6 +15,14 @@
                 info=data;
                 var total=0;
                 for (var i=0;i<data.data[0].length;i++){
+                    let img;
+                    if(data.data[1][i].status==="已发货"){
+                        img='<i class="fa fa-check-circle-o"></i>';
+                    }
+                    else{
+                        img='<i class="fa fa-refresh"></i>';
+                    }
+
                     $("#order_list").append('<div class="cart-product border-bottom--medium" id="the_item"'+i+'>\n' +
                         '                <div class="cart-product__image">\n' +
                         '                    <a href="shop-product.html?bookId='+data.data[0][i].bookId+'">\n' +
@@ -22,14 +30,14 @@
                         '                    </a>\n' +
                         '                </div>\n' +
                         '                <div class="cart-product__content">\n' +
-                        '                    <h3 class="title"><a href="shop-product.html?bookId='+data.data[0][i].bookId+'">'+data.data[0][i].title+'</h3>\n' +
+                        '                    <h3 class="title"><a href="chat.html?logistics='+data.data[1][i].logistic+'">'+data.data[0][i].title+'</h3>\n' +
                         '                    <span class="category">'+data.data[0][i].author+'</span>\n' +
                         '                    <div class="price">\n' +
                         '                        <span class="discounted-price">价格：'+data.data[0][i].prize+'元<br>购买时间：'+data.data[1][i].time+'</br></span>\n' +
                         '                    </div>\n' +
                         '                </div>\n' +
                         '                <div class="cart-product__status">\n' +
-                        '                    <p><span><i class="fa fa-refresh"></i></span>'+data.data[1][i].status+'</p>\n' +
+                        '                    <p><span>'+img+'</span>'+data.data[1][i].status+'</p>\n' +
                         '                </div>\n' +
                         '                <div class="cart-product__content">\n' +
                         '                    <p>配送地址：'+data.data[1][i].address+'</p>\n' +

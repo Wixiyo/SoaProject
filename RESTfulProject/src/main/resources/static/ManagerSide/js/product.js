@@ -84,7 +84,6 @@ $("#add_book").click(function (){
     $.ajax({
         url:"http://localhost:8080/bookinfo/addBook",// 发送请求的URL字符串。
         data:{// 发送到服务器的数据。
-            bookId:$("#id").val(),
             title:$("#title").val(),
             author:$("#author").val(),
             body:$("#body").val(),

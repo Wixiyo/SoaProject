@@ -14,6 +14,6 @@ public interface OrderRepository extends JpaRepository<Order,Integer>, JpaSpecif
     List<Order> findByUserId(String user);
 
     @Modifying
-    @Query("UPDATE Order SET logistic=?1 WHERE id=?2")
+    @Query("UPDATE Order SET logistic=?1 ,status='已发货' WHERE id=?2")
     void updateLogistics(String nuo,long id);
 }
