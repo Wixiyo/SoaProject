@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class BookService {
+public class BookService {//书籍管理服务
 
     @Autowired
     private BookRepository bookRepository;

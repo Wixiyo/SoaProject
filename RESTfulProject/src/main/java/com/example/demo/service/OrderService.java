@@ -19,7 +19,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class OrderService {
+public class OrderService {//订单管理服务
     @Autowired
     private OrderRepository orderRepository;
     @Autowired

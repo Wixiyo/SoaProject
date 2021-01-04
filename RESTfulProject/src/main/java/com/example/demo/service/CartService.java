@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CartService {
+public class CartService {//购物车管理服务
     @Autowired
     private CartRepository cartRepository;
     @Autowired

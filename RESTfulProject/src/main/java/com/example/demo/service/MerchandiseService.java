@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class MerchandiseService {
+public class MerchandiseService {//商品服务
     @Autowired
     private MerchandiseRepository merchandiseRepository;
     private UserRepository userRepository;

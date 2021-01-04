@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class CouponService {
+public class CouponService {//优惠券服务，未完成
 
     @Autowired
     private CouponRepository couponRepository;
