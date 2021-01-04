@@ -1,10 +1,9 @@
 package com.example.demo.config;
 
-import com.example.demo.controller.JerseyController;
-import com.example.demo.controller.LoginController;
-import com.example.demo.controller.LogisticsController;
+import com.example.demo.service.undone.JerseyController;
+import com.example.demo.service.userService.LoginController;
+import com.example.demo.service.logisticsService.LogisticsController;
 import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.server.spring.scope.RequestContextFilter;
 import org.springframework.context.annotation.Configuration;
 
 import javax.ws.rs.ApplicationPath;
