@@ -1,6 +1,5 @@
-package com.example.demo.dao.repository;
+package com.example.demo.dao.orderDao;
 
-import com.example.demo.dao.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
@@ -15,4 +14,8 @@ public interface OrderRepository extends JpaRepository<Order,Integer>, JpaSpecif
     @Modifying
     @Query("UPDATE Order SET logistic=?1 ,status='已发货' WHERE id=?2")
     void updateLogistics(String nuo,long id);
+
+    @Modifying
+    @Query("UPDATE Order SET status='已确认' WHERE logistic=?1")
+    void updateStatus(String nuo);
 }

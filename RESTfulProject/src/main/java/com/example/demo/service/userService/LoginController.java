@@ -1,11 +1,10 @@
 package com.example.demo.service.userService;
 
-import com.example.demo.dao.entity.User;
-import com.example.demo.dao.repository.UserRepository;
+import com.example.demo.dao.userDao.User;
+import com.example.demo.dao.userDao.UserRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.Response;
 import com.example.demo.result.ResponseData;
-import com.example.demo.service.userService.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.bind.annotation.*;

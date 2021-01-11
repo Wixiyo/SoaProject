@@ -1,6 +1,6 @@
 package com.example.demo.service.undone;
 
-import com.example.demo.dao.repository.CouponRepository;
+import com.example.demo.service.undone.repository.CouponRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.Response;
 import com.example.demo.result.ResponseData;

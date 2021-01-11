@@ -1,7 +1,7 @@
-package com.example.demo.dao.repository;
+package com.example.demo.service.undone.repository;
 
 
-import com.example.demo.dao.entity.Merchandise;
+import com.example.demo.service.undone.entity.Merchandise;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;

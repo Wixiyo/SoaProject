@@ -1,6 +1,6 @@
 package com.example.demo.result;
 
-import lombok.Data;
+
 import lombok.NoArgsConstructor;
 
 //返回结果数据格式封装

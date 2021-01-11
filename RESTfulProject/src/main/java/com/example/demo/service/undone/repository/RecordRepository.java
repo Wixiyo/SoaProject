@@ -1,6 +1,6 @@
-package com.example.demo.dao.repository;
+package com.example.demo.service.undone.repository;
 
-import com.example.demo.dao.entity.Record;
+import com.example.demo.service.undone.entity.Record;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

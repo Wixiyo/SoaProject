@@ -1,4 +1,4 @@
-package com.example.demo.dao.entity;
+package com.example.demo.dao;
 
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;

@@ -12,9 +12,9 @@ $("#search_book_title").ready(function (){
             binfo=data;
             $("#product_list").append('<tr>\n' +
                 '    <th>ID编号</th>\n' +
-                '    <th>书名</th>\n' +
+                '    <th>商品名</th>\n' +
                 '    <th>描述</th>\n' +
-                '    <th>作者</th>\n' +
+                '    <th>备注</th>\n' +
                 '    <th>价格</th>\n' +
                 '    <th>库存</th>\n' +
                 '    <th>条码</th>\n' +
@@ -119,9 +119,9 @@ $("#search_product").click(function (){
             binfo=data;
             $("#product_list").append('<tr>\n' +
                 '    <th>ID编号</th>\n' +
-                '    <th>书名</th>\n' +
+                '    <th>商品名</th>\n' +
                 '    <th>描述</th>\n' +
-                '    <th>作者</th>\n' +
+                '    <th>备注</th>\n' +
                 '    <th>价格</th>\n' +
                 '    <th>库存</th>\n' +
                 '    <th>条码</th>\n' +

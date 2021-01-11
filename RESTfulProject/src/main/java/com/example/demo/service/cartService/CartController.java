@@ -1,6 +1,6 @@
 package com.example.demo.service.cartService;
 
-import com.example.demo.dao.repository.CartRepository;
+import com.example.demo.dao.cartDao.CartRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.Response;
 import com.example.demo.result.ResponseData;

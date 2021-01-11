@@ -1,5 +1,6 @@
-package com.example.demo.dao.entity;
+package com.example.demo.dao.orderDao;
 
+import com.example.demo.dao.Transaction;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -7,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "book_order")
 @Data
-public class Order extends Transaction{
+public class Order extends Transaction {
 
     private String status;
 

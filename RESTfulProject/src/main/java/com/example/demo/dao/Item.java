@@ -1,4 +1,4 @@
-package com.example.demo.dao.entity;
+package com.example.demo.dao;
 
 import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -10,7 +10,7 @@ import javax.persistence.MappedSuperclass;
 @EntityListeners(AuditingEntityListener.class)
 @Data
 public abstract class Item {
-    private int Barcode;
-    private double Prize;
-    private int Stock;
+    private int barcode;
+    private double prize;
+    private int stock;
 }
