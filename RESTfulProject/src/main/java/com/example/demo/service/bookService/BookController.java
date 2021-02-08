@@ -1,8 +1,8 @@
 package com.example.demo.service.bookService;
 
-import com.example.demo.dao.bookDao.Book;
-import com.example.demo.dao.cartDao.Cart;
-import com.example.demo.dao.bookDao.BookRepository;
+import com.example.demo.dao.entity.Book;
+import com.example.demo.dao.entity.Cart;
+import com.example.demo.dao.repository.BookRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.Response;
 import com.example.demo.result.ResponseData;

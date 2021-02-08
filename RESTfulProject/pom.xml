@@ -17,12 +17,6 @@
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
-		<!-- httpClient -->
-		<dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>3.1</version>
-		</dependency>
 
 		<!-- jersey -->
 		<dependency>

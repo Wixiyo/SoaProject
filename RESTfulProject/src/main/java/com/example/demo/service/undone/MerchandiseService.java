@@ -1,8 +1,8 @@
 package com.example.demo.service.undone;
 
-import com.example.demo.service.undone.repository.MerchandiseRepository;
-import com.example.demo.service.undone.entity.Merchandise;
-import com.example.demo.dao.userDao.UserRepository;
+import com.example.demo.dao.repository.MerchandiseRepository;
+import com.example.demo.dao.entity.Merchandise;
+import com.example.demo.dao.repository.UserRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.Response;
 import com.example.demo.result.ResponseData;

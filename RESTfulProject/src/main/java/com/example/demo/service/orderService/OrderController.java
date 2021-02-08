@@ -1,8 +1,8 @@
 package com.example.demo.service.orderService;
 
-import com.example.demo.dao.orderDao.Order;
-import com.example.demo.dao.cartDao.CartRepository;
-import com.example.demo.dao.orderDao.OrderRepository;
+import com.example.demo.dao.entity.Order;
+import com.example.demo.dao.repository.CartRepository;
+import com.example.demo.dao.repository.OrderRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.Response;
 import com.example.demo.result.ResponseData;
@@ -46,11 +46,6 @@ public class OrderController {
     @RequestMapping(value = "/{id}/{nuo}", method = RequestMethod.GET)
     public ResponseData searchOrder(@PathVariable("id") long id,@PathVariable("nuo") String nuo) {
         return orderService.setLogisticByOrderId(nuo,id);
-    }
-    //改
-    @RequestMapping(value = "/check/{nuo}", method = RequestMethod.GET)
-    public ResponseData checkOrder(@PathVariable("nuo") String nuo) {
-        return orderService.checkOrderId(nuo);
     }
 
 }

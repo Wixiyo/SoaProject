@@ -1,11 +1,11 @@
 package com.example.demo.service.orderService;
 
-import com.example.demo.dao.bookDao.Book;
-import com.example.demo.dao.orderDao.Order;
-import com.example.demo.dao.userDao.User;
-import com.example.demo.dao.bookDao.BookRepository;
-import com.example.demo.dao.orderDao.OrderRepository;
-import com.example.demo.dao.userDao.UserRepository;
+import com.example.demo.dao.entity.Book;
+import com.example.demo.dao.entity.Order;
+import com.example.demo.dao.entity.User;
+import com.example.demo.dao.repository.BookRepository;
+import com.example.demo.dao.repository.OrderRepository;
+import com.example.demo.dao.repository.UserRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.ResponseData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,10 +63,6 @@ public class OrderService {//订单管理服务
     }
     public ResponseData setLogisticByOrderId(String nuo,long id){
         orderRepository.updateLogistics(nuo,id);
-        return new ResponseData(ExceptionMsg.SUCCESS);
-    }
-    public ResponseData checkOrderId(String nuo){
-        orderRepository.updateStatus(nuo);
         return new ResponseData(ExceptionMsg.SUCCESS);
     }
 }

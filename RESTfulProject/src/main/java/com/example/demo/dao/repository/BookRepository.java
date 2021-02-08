@@ -1,5 +1,6 @@
-package com.example.demo.dao.bookDao;
+package com.example.demo.dao.repository;
 
+import com.example.demo.dao.entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;

@@ -1,9 +1,9 @@
 package com.example.demo.service.bookService;
 
-import com.example.demo.dao.bookDao.Book;
-import com.example.demo.dao.cartDao.Cart;
-import com.example.demo.dao.bookDao.BookRepository;
-import com.example.demo.dao.cartDao.CartRepository;
+import com.example.demo.dao.entity.Book;
+import com.example.demo.dao.entity.Cart;
+import com.example.demo.dao.repository.BookRepository;
+import com.example.demo.dao.repository.CartRepository;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.ResponseData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class BookService {//商品管理服务
+public class BookService {//书籍管理服务
 
     @Autowired
     private BookRepository bookRepository;

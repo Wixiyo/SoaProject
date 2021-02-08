@@ -1,7 +1,7 @@
 $("#search_order").click(function(){
     $("#order_list").empty();
     $("#order_list").append('<tr>\n' +
-        '    <th>商品编号</th>\n' +
+        '    <th>书籍编号</th>\n' +
         '    <th>收件人</th>\n' +
         '    <th>寄件地址</th>\n' +
         '    <th>订单金额</th>\n' +
@@ -54,7 +54,7 @@ $("#search_order").click(function(){
 $("#search_order").ready(function (){
     $("#order_list").empty();
     $("#order_list").append('<tr>\n' +
-        '    <th>商品</th>\n' +
+        '    <th>书籍</th>\n' +
         '    <th>收件人</th>\n' +
         '    <th>寄件地址</th>\n' +
         '    <th>订单金额</th>\n' +

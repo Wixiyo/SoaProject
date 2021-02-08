@@ -1,4 +1,4 @@
-package com.example.demo.dao.cartDao;
+package com.example.demo.dao.entity;
 
 import lombok.Data;
 

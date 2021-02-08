@@ -1,6 +1,6 @@
 package com.example.demo.service.userService;
 
-import com.example.demo.dao.userDao.User;
+import com.example.demo.dao.entity.User;
 import com.example.demo.result.ExceptionMsg;
 import com.example.demo.result.Response;
 import com.example.demo.result.ResponseData;

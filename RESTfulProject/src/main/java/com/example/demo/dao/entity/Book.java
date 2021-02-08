@@ -1,6 +1,5 @@
-package com.example.demo.dao.bookDao;
+package com.example.demo.dao.entity;
 
-import com.example.demo.dao.Item;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -13,13 +12,13 @@ import javax.persistence.*;
  * Description: ${DESCRIPTION}
  * History:
  * <author>          <time>          <version>          <desc>
- * 备注姓名           修改时间           版本号              描述
+ * 作者姓名           修改时间           版本号              描述
  */
 
 @Entity
 @Table(name = "book")
 @Data
-public class Book extends Item {
+public class Book extends Item{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long bookId;

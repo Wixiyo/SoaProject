@@ -1,4 +1,4 @@
-package com.example.demo.dao.userDao;
+package com.example.demo.dao.entity;
 
 import lombok.Data;
 
